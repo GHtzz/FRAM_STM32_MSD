@@ -7,16 +7,20 @@ A mass storage device using FRAM based on a STM32 MCU.
 * Order FRAM and implemnt on discovery board
 * create castume board, trying to use better suited MCU.
 * board bringup and tests
-* mv FW to Rust  
+* mv FW to Rust
+
 
 # Notes
-* RSA-4092 size
-| ------------- || PEM (Base64)  | GPG (ASCII-armored PGP)|
-| ------------- || ------------- | ------------- |
-|Public Key     || ~800–900 bytes | ~3.1 KB |
-|Private Key    || ~1700–1800 bytes | ~6.8 KB |
 
-Private Key		PEM - does not include metadata
+## RSA-4096 Key Size Comparison
+
+| Key Type     | PEM (Base64)     | GPG (ASCII-armored PGP) |
+|--------------|------------------|-------------------------|
+| Public Key   | ~800–900 bytes   | ~3.1 KB                 |
+| Private Key  | ~1700–1800 bytes | ~6.8 KB                 |
+
+**Note:**  
+- The **PEM private key** does **not** include OpenPGP metadata.
 
 # Parts
 ## MCU options
